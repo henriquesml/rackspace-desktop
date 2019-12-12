@@ -1,0 +1,29 @@
+body {
+    background: #DDD;
+}
+.container {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    
+    width: 250px;
+    height: 50px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 5px;
+}

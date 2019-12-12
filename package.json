@@ -1,0 +1,14 @@
+{
+  "name": "rackspace-desktop",
+  "version": "1.0.0",
+  "description": "Rackspace Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Henrique Schmeller",
+  "license": "",
+  "devDependencies": {
+    "electron": "^7.1.4"
+  }
+}
