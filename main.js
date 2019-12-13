@@ -8,7 +8,7 @@ function createWindow () {
 
   // Desabilida o menu padrão
   Menu.setApplicationMenu(null)
-  let win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width,
     height,
     webPreferences: {
@@ -17,28 +17,25 @@ function createWindow () {
   })
 
   // Titulo da janela
-  win.setTitle("Rackspace")
+  mainWindow.setTitle("Rackspace")
 
-  win.setBackgroundColor("#DDD")
+  mainWindow.setBackgroundColor("#DDD")
 
   // Abrir maximizado
-  win.maximize()
+  mainWindow.maximize()
 
+  mainWindow.loadFile('index.html')
   //win.loadURL('https://apps.rackspace.com/index.php')
 
-  win.webContents.on('open-in-browser', (event, url) => {
+  mainWindow.webContents.on('new-window', (event, url) => {
     
     if (url.includes('https://apps.rackspace.com/')){
-      console.log('FOI')
     }
     else{
       event.preventDefault()
       shell.openExternal(url)
     }
   });
-
-  // e carregar o index.html do aplicativo.
-  win.loadFile('index.html')
 }
 
 app.on('ready', createWindow)
