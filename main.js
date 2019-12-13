@@ -1,6 +1,11 @@
- const electron = require('electron');
+const electron = require('electron');
 const { app, BrowserWindow, Menu } = electron
 const shell = require('electron').shell;
+const path = require('path');
+const nativeImage = electron.nativeImage;
+
+// Importa o Icone que será usado no APP (Janela)
+const Icon = nativeImage.createFromPath(path.join(__dirname, 'logo-win.png'))
 
 function createWindow () {
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
@@ -11,6 +16,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width,
     height,
+    icon: Icon,
     webPreferences: {
       nodeIntegration: true
     }
