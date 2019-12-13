@@ -4,11 +4,21 @@
   "description": "Rackspace Desktop",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "author": "Henrique Schmeller",
   "license": "",
   "devDependencies": {
-    "electron": "^7.1.4"
+    "electron": "^7.1.4",
+    "electron-builder": "^21.2.0"
+  },
+  "build" :  { 
+    "appId" :  "rackspace.descktop", 
+    "mac" :  { 
+      "category" :  "your.app.category.type" 
+    } 
   }
 }
