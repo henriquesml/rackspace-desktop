@@ -1,4 +1,3 @@
-# rackspace-desktop
-Rackspace Desktop made with Electron
+# Rackspace Desktop
 
-IN PROGRESS
+Rackspace Desktop made with Electron
